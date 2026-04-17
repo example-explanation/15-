@@ -1,0 +1,69 @@
+.boxes{
+  position: relative;
+  width: 100%;
+  height: 75px;
+}
+.box{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: lightblue;
+  border-radius: 50%;
+  opacity: 0.1;
+  
+  animation: box 6s infinite ease-in-out;
+}
+.box0{ animation-delay:   0s; top: 30%; right: 10%;}
+.box1{ animation-delay: 0.1s; top: 30%; right: 40%;}
+.box2{ animation-delay: 0.2s; top: 30%; right: 70%;}
+.box3{ animation-delay: 0.3s; top: 30%; right: 95%;}
+
+@keyframes box{
+    0%{ opacity: 0.1;}
+   50%{ opacity: 0.9;}
+  100%{ opacity: 0.1;}
+}
+h1{
+  border: 2px solid black;
+  padding: 1px;
+  display: inline-block;
+}
+button{
+  margin: 0 20px;
+  margin-top: 10px;
+}
+#app{
+  max-width: 350px;   /* PCで横に広がりすぎない */
+  margin: 0 auto;     /* 常に横中央 */
+  padding: 12px;
+}
+/*終了時に大きく見やすく中央に*/
+#app.end{
+  text-align: center;
+  padding: 18px 15px;
+}
+/*問題の終了を知らせる*/
+#app.end #question{
+  display: block;
+  width: fit-content;
+  margin: 14px auto 12px;
+  padding: 14px 18px;
+  font-size: 28px;
+  font-weight: 800;
+  border: 3px solid #222;
+  border-radius: 12px;
+  background: #fff4c2;
+  white-space: nowrap;
+  word-break: keep-all;
+  line-break: strict;
+}
+/*結果を見やすく*/
+#app.end #result{
+  margin-top: 10px;
+  font-size: 36px;
+  font-weight: 900;
+  color: #0a7;
+}
+#app.end button{
+  opacity: 0.6;
+}
